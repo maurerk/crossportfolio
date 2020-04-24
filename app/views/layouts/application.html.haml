@@ -1,0 +1,27 @@
+!!! 5
+%html
+  %head
+    %title Crossportfolio
+    = csrf_meta_tags
+    = csp_meta_tag
+
+    = stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+
+  %body{ class: 'font-mono flex flex-col h-screen bg-green-100' }
+    %p{ class: "notice" }= notice
+    %p{ class: "alert" }= alert
+
+    %div{ class: "flex-grow"}
+      = yield
+
+    %div{ class: "h-8 p-2" }
+      %div{ class: "text-grey-800 text-xs hover:text-orange-600" }
+        %p
+          Copyright &copy;
+          = Date.current.strftime('%Y')
+
+
+
+
+-#
