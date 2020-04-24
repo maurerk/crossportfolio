@@ -9,10 +9,10 @@
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
 
   %body{ class: 'font-mono flex flex-col h-screen bg-green-100' }
-    %p{ class: "notice" }= notice
-    %p{ class: "alert" }= alert
 
     %div{ class: "flex-grow"}
+      %p{ class: "notice" }= notice
+      %p{ class: "alert" }= alert
 
       = render partial: 'home/navbar'
 

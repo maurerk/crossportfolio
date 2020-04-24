@@ -1,0 +1,11 @@
+%p
+  %strong
+    = "Ticker: #{@stock.ticker}"
+
+%p
+  %strong
+    = "User: #{@stock.user_id}"
+
+= link_to 'Edit', edit_stock_path(@stock)
+|
+= link_to 'Back', stocks_path
