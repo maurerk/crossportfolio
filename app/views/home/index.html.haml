@@ -1,2 +1,31 @@
 %h1 Cross Portfolio
-%p Let's do this!
+
+
+= form_tag root_path, :method => 'POST'  do
+  = text_field_tag 'ticker', nil, placeholder: "Enter Ticket Symbol", size: 50
+  = submit_tag 'Lookup'
+
+= @response  
+
+- if @stock
+  = @stock.company_name
+  = @stock.latest_price
+- elsif @nothing
+  = @nothing
+
+
+
+-#symbol, company_name, primary_exchange, sector, calculation_price, open,
+  open_time, close, close_time, high, low, latest_price, latest_source,
+  latest_time, latest_update, latest_volume, iex_realtime_price,
+  iex_realtime_size, iex_last_updated, delayed_price, delayed_price_time,
+  previous_close,change, change_percent, iex_market_percent, iex_volume,
+  avg_total_volume, iex_bid_price, iex_bid_size, iex_ask_price, iex_ask_size,
+  market_cap, pe_ratio, week52_high, week52_low, ytd_change, chart
+
+
+
+
+
+  - if @error
+    = @error

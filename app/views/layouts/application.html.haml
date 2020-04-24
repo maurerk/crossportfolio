@@ -1,7 +1,7 @@
 !!! 5
 %html
   %head
-    %title Crossportfolio
+    %title Cross Portfolio
     = csrf_meta_tags
     = csp_meta_tag
 
@@ -13,13 +13,12 @@
     %p{ class: "alert" }= alert
 
     %div{ class: "flex-grow"}
+
+      = render partial: 'home/navbar'
+
       = yield
 
-    %div{ class: "h-8 p-2" }
-      %div{ class: "text-grey-800 text-xs hover:text-orange-600" }
-        %p
-          Copyright &copy;
-          = Date.current.strftime('%Y')
+      = render partial: 'home/footer'
 
 
 

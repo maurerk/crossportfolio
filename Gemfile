@@ -33,6 +33,12 @@ gem 'tailwindcss', '~> 1.0', '>= 1.0.3'
 # Haml (HTML Abstraction Markup Language) is a layer on top of HTML or XML
 gem 'haml', '~> 5.1', '>= 5.1.2'
 
+# Retrieve stock market data
+gem 'stock_quote', '~> 3.0'
+
+# Devise
+gem 'devise', '~> 4.7', '>= 4.7.1'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
